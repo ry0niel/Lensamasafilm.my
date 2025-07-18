@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Cinematography Portfolio</title>
+	<link href="https://fonts.googleapis.com/css2?family=Blaka&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page1.css">
+    <!-- Link to external libraries for animations, if used (e.g., GSAP, Three.js) -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.3/dist/locomotive-scroll.min.css"> -->
+</head>
+<body>
+    <!-- Fixed Header Bar -->
+    <header class="header-bar">
+        <img src="lensamasa logo.png" alt="Your Logo" class="header-logo-left">
+        <nav class="header-nav-buttons">
+            <a href="index.html#about-me-section" class="header-nav-button">About Me</a>
+
+            <button class="header-nav-button" onclick="window.location.href='page3.html'">Achievement</button>
+        </nav>
+        <button class="header-nav-button menu-button" onclick="window.location.href='page4.html'">MENU</button>
+    </header>
+
+    <!-- Main Content Wrapper for scrolling content -->
+    <div class="main-content-wrapper">
+        <!-- Section 1: Video Banner -->
+        <section class="video-banner-section">
+            <video autoplay muted loop playsinline class="video-background">
+                <source src="banner(1).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-overlay-content">
+                <img src="DIRECTED_BY__5_-removebg-preview.png" alt="Small Image" class="small-overlay-image fade-in-up">
+                <div class="video-text-and-button fade-in-up">
+                    <p class="Blaka-font">Imagination strikes,I bring it to life</p>
+                    <button class="common-button" onclick="window.location.href='page2.html'">Explore My Work</button>
+                </div>
+            </div>
+        </section>
+		
+		<div
+        <!-- Section 2: About Me -->
+        <section id="about-me-section" class="about-me-section">
+            <div class="about-me-left fade-in-up">
+                <p class="impact-font big-text">Hello, I'm Danial Adnin !,</p>
+                <p class="impact-font small-text">I’m Muhammad Danial Bin Mohd Adnin, a creative individual with a deep passion for the arts, design, and visual storytelling. Whether it’s through cinematography, photography, or illustration, I believe in blending fantasy with reality, capturing moments, ideas, and emotions that resonate beyond the surface. </p>
+                <p class="impact-font small-text"> My work is a reflection of how I see the world, and I’m driven by the desire to share that vision with others. Ultimately, my goal is not just to create, but to inspire meaningful change in Malaysia’s media and film industry, pushing boundaries and opening new avenues for creative expression."</p>
+            </div>
+            <div class="about-me-right fade-in-up">
+                <h2 class="blaka-font vertical-text">The Story-Teller</h2>
+                <div class="photo-slider-container">
+                    <!-- JavaScript Banner Slider will be injected/controlled here -->
+                    <img src="img 1.png" alt="About Me Photo 1" class="slider-image active">
+                    <img src="img 2.png" alt="About Me Photo 2" class="slider-image">
+                    <img src="img 3.png" alt="About Me Photo 3" class="slider-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Bottom Page (Common to all pages) -->
+        <section class="bottom-page-section">
+            <div class="thunder-text-container">
+                <div class="thunder-animation"></div>
+                <p class="blaka-font big-title-text typing-glitch-container">
+                    <span class="typing-glitch-text">ENVISION .IGNITE . ACHIEVE  </span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Fixed Scroll Up Button -->
+        <button class="scroll-up-button">&#9650;</button> <!-- Up arrow character -->
+
+        <!-- Footer Section (Common to all pages) -->
+        <footer class="footer-section">
+            <img src="lensamasa logo.png" alt="Footer Logo" class="footer-logo">
+            <div class="social-links">
+                <a href="https://youtube.com/@ry0niel" target="_blank" class="social-link">YouTube</a>
+        <a href="https://www.instagram.com/dnldnz" target="_blank" class="social-link">Instagram</a>
+        <a href="https://www.tiktok.com/@dnldnzz" target="_blank" class="social-link">TikTok</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="page1.js"></script>
+</body>
+</html>
