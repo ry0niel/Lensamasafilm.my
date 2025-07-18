@@ -1,0 +1,299 @@
+/* Global Styles */
+
+
+@font-face 
+{}
+.big-title, 
+.cta-btn, 
+.menu-btn, 
+.home-logo, 
+.vertical-text, 
+.footer-animation {
+    font-family: 'Blaka', cursive;
+}
+
+
+@font-face {
+    font-family: 'NORWESTER';
+    src: url('fonts/NORWESTER.woff2') format('woff2'),
+         url('fonts/NORWESTER.woff') format('woff');
+    /* Add other font formats for broader browser support */
+}
+
+@font-face {
+    font-family: 'IMPACT';
+    src: url('fonts/IMPACT.woff2') format('woff2'),
+         url('fonts/IMPACT.woff') format('woff');
+    /* Add other font formats for broader browser support */
+}
+
+:root {
+    --orange-color: #FF4500; /* Deep Orange */
+    --metallic-gray-color: #A9A9A9; /* DarkGray, adjust for metallic sheen */
+    --black-color: #000000;
+    --text-color-light: #F5F5F5; /* For contrast on dark backgrounds */
+    --text-color-dark: #333333; /* For contrast on light backgrounds */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for internal links */
+}
+
+body {
+    background: #111;
+    margin: 0;
+    padding: 0;
+    font-family: 'Blaka', cursive;
+    color: #fff;
+}
+
+/* Keep header, carousel, bottom in vertical flow */
+.main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+body {
+    font-family: 'IMPACT', sans-serif; /* Default font */
+    color: var(--text-color-light);
+    background-color: var(--black-color);
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    position: relative; /* For fixed background */
+}
+
+/* Fixed Background with Parallax */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("F_Jovd7aMAA9gCo.jpeg"); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This creates the parallax effect */
+    z-index: -1; /* Behind content */
+}
+
+/* Main Content Wrapper to allow scrolling over fixed background */
+.main-content-wrapper {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for readability */
+    min-height: 100vh; /* Ensure it covers the viewport height */
+}
+
+/* Header Bar (Fixed) */
+.header-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Adjust height as needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+    z-index: 1000; /* Always on top */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Inverted Blend Effect (Conceptual - might need JS for true blend modes) */
+.header-bar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.header-logo-left, .header-logo-center {
+    height: 100px; /* Adjust logo size */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.header-logo-left:hover, .header-logo-center:hover {
+    transform: scale(1.05);
+}
+
+.header-nav-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.header-nav-button {
+    font-family: 'BLAKA', sans-serif; /* Text button font */
+    font-size: 1.2em;
+    color: var(--text-color-light);
+    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.header-nav-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.header-nav-button:hover::before {
+    left: 100%;
+}
+
+.header-nav-button:hover {
+    color: var(--orange-color);
+    text-shadow: 0 0 10px var(--orange-color), 0 0 20px var(--orange-color);
+}
+
+/* Scroll Up Button (Fixed) */
+.scroll-up-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--orange-color);
+    color: var(--text-color-light);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scroll-up-button:hover {
+    background-color: darken(var(--orange-color), 10%);
+    box-shadow: 0 0 20px var(--orange-color), 0 0 30px var(--orange-color);
+}
+
+/* Footer (Appears on every page) */
+.footer-section {
+    background-color: var(--orange-color);
+    padding: 10px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-logo {
+    height: 80px; /* Adjust footer logo size */
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.social-link {
+    color: var(--text-color-light);
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--black-color);
+    transform: translateY(-5px);
+}
+
+/* Common Button Styling (for all interactive buttons) */
+.common-button {
+    font-family: 'BLAKA', sans-serif;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    background-color: var(--metallic-gray-color);
+    color: var(--text-color-light);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.common-button:hover {
+    background-color: var(--orange-color);
+    box-shadow: 0 0 20px var(--orange-color), 0 0 30px var(--orange-color);
+    transform: translateY(-3px);
+}
+
+/* Entrance Animation (Example - apply to elements as they appear on scroll) */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Typing Glitch Effect (Conceptual CSS for visual, JS for actual typing) */
+.typing-glitch-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.typing-glitch-text {
+    font-family: 'IMPACT', sans-serif; /* Or BLAKA for titles */
+    color: var(--text-color-light);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--orange-color); /* Cursor effect */
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--orange-color); }
+}
+
+/* Thunder Animation (Conceptual - requires GIF/Video or complex SVG/JS) */
+.thunder-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px; /* Adjust size */
+    height: 200px;
+    background-image: url("4b5fb8405aeb3f533c3402f9ba122f00.gif"); /* Your thunder GIF */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0; /* Behind text */
+}
+
+/* Locomotive Scroll (Conceptual - requires JS library) */
+/* This would be handled by the Locomotive Scroll JS library, not pure CSS */
