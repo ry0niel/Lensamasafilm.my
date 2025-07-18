@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* Page 3 Specific Styles */
+
+.achievements-section {
+    padding: 100px 5%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 80px; /* Account for fixed header */
+}
+
+.achievements-section h1 {
+    font-size: 3.5em;
+    color: var(--orange-color);
+    margin-bottom: 50px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(50, 50, 50, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.achievement-item:last-child {
+    margin-bottom: 0;
+}
+
+.achievement-item.reverse-layout {
+    flex-direction: row-reverse; /* Image on right, text on left */
+}
+
+.achievement-image {
+    width: 40%; /* Adjust image width */
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid var(--metallic-gray-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.achievement-text {
+    flex: 1;
+    text-align: left;
+}
+
+.achievement-text h2 {
+    font-family: 'IMPACT', sans-serif;
+    font-size: 1.8em;
+    color: var(--orange-color);
+    margin-bottom: 15px;
+}
+
+.achievement-text p {
+    font-family: 'IMPACT', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: var(--text-color-light);
+}

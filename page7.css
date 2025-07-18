@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* Page 6 Specific Styles */
+
+.short-film-section {
+    padding: 100px 5%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 80px; /* Account for fixed header */
+}
+
+.short-film-section h1 {
+    font-size: 3.5em;
+    color: var(--orange-color);
+    margin-bottom: 50px;
+}
+
+.film-item {
+    display: flex;
+    align-items: flex-start; /* Align video and text to the top */
+    gap: 50px;
+    margin-bottom: 80px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(50, 50, 50, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.film-item:last-child {
+    margin-bottom: 0;
+}
+
+.film-item.reverse-layout {
+    flex-direction: row-reverse; /* Video on right, text on left */
+}
+
+.film-video-container {
+    flex: 0 0 60%; /* Video takes 60% width */
+    max-width: 700px; /* Max width for video */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.film-video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid var(--metallic-gray-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.film-details {
+    flex: 1;
+    text-align: left;
+}
+
+.film-details h2 {
+    font-family: 'IMPACT', sans-serif;
+    font-size: 2em;
+    color: var(--orange-color);
+    margin-bottom: 15px;
+}
+
+.film-details p {
+    font-family: 'IMPACT', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: var(--text-color-light);
+    margin-bottom: 10px;
+}
+
+.hyperlink-button {
+    font-family: 'BLAKA', sans-serif;
+    font-size: 1em;
+    padding: 10px 20px;
+    background-color: var(--metallic-gray-color);
+    color: var(--text-color-light);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* Allows padding and margin */
+}
+
+.hyperlink-button:hover {
+    background-color: var(--orange-color);
+    box-shadow: 0 0 15px var(--orange-color);
+    transform: translateY(-2px);
+}

@@ -1,0 +1,143 @@
+/* Page 1 Specific Styles */
+
+/* Video Banner Section */
+.video-banner-section {
+    position: relative;
+    width: 100%;
+    height: 466px; /* Fixed height as per lo-fi */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px; /* To account for fixed header */
+}
+
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    z-index: -1;
+}
+
+.video-overlay-content {
+    position: relative;
+    z-index: 1;
+    color: var(--text-color-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.small-overlay-image {
+    width: 170px; /* Adjust size as per lo-fi */
+    height: inherit;
+}
+
+.video-text-and-button p {
+   font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+    font-size: 2.5em; /* Adjust size as per lo-fi */
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* About Me Section */
+.about-me-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    padding: 80px 5%;
+    gap: 5%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+}
+
+.about-me-left {
+    flex: 1;
+    max-width: 500px; /* Adjust width as per lo-fi */
+    text-align: left;
+}
+
+.about-me-left .big-text {
+    font-family: 'IMPACT', sans-serif;
+    font-size: 2.2em; /* Adjust size as per lo-fi */
+    color: var(--orange-color);
+    margin-bottom: 20px;
+}
+
+.about-me-left .small-text {
+    font-family: 'IMPACT', sans-serif;
+    font-size: 1.1em; /* Adjust size as per lo-fi */
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-me-right {
+    display: flex;
+    align-items:center;
+    gap: 20px;
+}
+
+.about-me-right .vertical-text {
+    font-family: 'BLAKA', sans-serif;
+    font-size: 3em; /* Adjust size as per lo-fi */
+    writing-mode: vertical-rl; /* Vertical text */
+    text-orientation: mixed;
+    color: var(--metallic-gray-color);
+    white-space: nowrap;
+    transform: rotate(180deg); /* Rotate to read top-to-bottom */
+}
+
+.photo-slider-container {
+    width: 500px; /* Adjust slider width */
+    height: 600px; /* Adjust slider height */
+    overflow: hidden;
+    position: relative;
+    border: 0px solid var(--metallic-gray-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.photo-slider-container .slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.photo-slider-container .slider-image.active {
+    opacity: 1;
+}
+
+/* Bottom Page Section (Common) */
+.bottom-page-section {
+    position: relative;
+    padding: 100px 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Darker overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* For thunder animation */
+}
+
+.thunder-text-container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.thunder-text-container .big-title-text {
+    font-size: 3.5em; /* Adjust size */
+    color: var(--orange-color);
+    text-shadow: 0 0 15px var(--orange-color);
+}

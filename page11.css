@@ -1,0 +1,173 @@
+/* Page 11 Specific Styles */
+
+.photography-banner-section {
+    position: relative;
+    width: 100%;
+    height: 470px; /* Fixed height */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px; /* Account for fixed header */
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.photography-banner-section h1 {
+    font-size: 3.5em;
+    color: var(--orange-color);
+    text-shadow: 0 0 15px var(--orange-color);
+    z-index: 2; /* Above banner images */
+    margin-bottom: 20px;
+}
+
+.photography-banner-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.photography-banner-slider .banner-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.photography-banner-slider .banner-slide.active {
+    opacity: 1;
+}
+
+.cartoon-camera-animation {
+    position: absolute;
+    bottom: 20px; /* Adjust position */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px; /* Adjust size */
+    height: auto;
+    z-index: 2; /* Above banner images */
+}
+
+.cartoon-camera-animation img {
+    width: 100%;
+    height: auto;
+    /* Add animation for wavering effect if it's a static image */
+    animation: waver 2s infinite alternate ease-in-out;
+}
+
+@keyframes waver {
+    0% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-5px) rotate(2deg); }
+    50% { transform: translateY(0px) rotate(0deg); }
+    75% { transform: translateY(5px) rotate(-2deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+
+.photography-category-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 80px 5%;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.photography-category-section:last-of-type {
+    margin-bottom: 0;
+}
+
+.photography-category-section.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+.photo-gallery-left {
+    flex: 0 0 50%; /* Image gallery takes 50% width */
+    max-width: 600px;
+    position: relative;
+}
+
+.photo-slider-controls {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Fixed height for gallery */
+    overflow: hidden;
+    border-radius: 8px;
+    border: 2px solid var(--metallic-gray-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.photo-slider-controls .gallery-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.photo-slider-controls .gallery-photo.active {
+    opacity: 1;
+}
+
+.gallery-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--orange-color);
+    border: none;
+    padding: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 5;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gallery-nav-button:hover {
+    background-color: var(--orange-color);
+    color: var(--black-color);
+}
+
+.gallery-nav-button.prev {
+    left: 10px;
+}
+
+.gallery-nav-button.next {
+    right: 10px;
+}
+
+.photo-text-right {
+    flex: 1;
+    text-align: left;
+}
+
+.photo-text-right h2 {
+    font-family: 'IMPACT', sans-serif;
+    font-size: 2em;
+    color: var(--orange-color);
+    margin-bottom: 15px;
+}
+
+.photo-text-right p {
+    font-family: 'IMPACT', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: var(--text-color-light);
+}
